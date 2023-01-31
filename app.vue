@@ -47,7 +47,7 @@ onUnmounted(() => {
         class="absolute right-0 top-0"
         :duration="duration / 1000"
       />
-      <dt>
+      <dt lang="ka">
         {{ letter.name }}
       </dt>
       <dd class="text-4xl" :class="{ invisible: !revealed }">
@@ -69,7 +69,9 @@ onUnmounted(() => {
           <span class="absolute top-[1px] left-[3px] text-sm">{{
             index + 1
           }}</span>
-          <span :class="{ invisible: !revealed }">{{ option.name }}</span>
+          <span :class="{ invisible: !revealed }" lang="ka">{{
+            option.name
+          }}</span>
           {{ option.latin }} {{ option.ipa }}
         </button>
       </li>
