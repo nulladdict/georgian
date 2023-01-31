@@ -22,6 +22,7 @@ const next = () => {
 };
 
 const shortcuts = (e: KeyboardEvent) => {
+  if (revealed.value) return
   switch (e.key) {
     case "1":
     case "2":
