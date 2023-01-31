@@ -14,8 +14,11 @@ const pick = (option: Letter) => {
 };
 
 const next = () => {
+  const current = revealed.value;
   revealed.value = null;
-  options.value = shuffle(georgian).slice(0, 4);
+  options.value = shuffle(
+    georgian.filter((option) => option.name !== current)
+  ).slice(0, 4);
 };
 
 const shortcuts = (e: KeyboardEvent) => {
