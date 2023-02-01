@@ -22,7 +22,7 @@ const next = () => {
 };
 
 const shortcuts = (e: KeyboardEvent) => {
-  if (revealed.value) return
+  if (revealed.value) return;
   switch (e.key) {
     case "1":
     case "2":
@@ -51,14 +51,14 @@ onUnmounted(() => {
         class="absolute right-0 top-0"
         :duration="duration / 1000"
       />
-      <dt lang="ka">
+      <div lang="ka">
         {{ letter.name }}
-      </dt>
-      <dd class="text-4xl" :class="{ invisible: !revealed }">
+      </div>
+      <div class="text-4xl" :class="{ invisible: !revealed }">
         {{ letter.latin }} {{ letter.ipa }}
-      </dd>
+      </div>
     </div>
-    <ul class="grid min-w-[320px] list-none grid-cols-2 grid-rows-2 gap-4">
+    <ul class="grid list-none grid-cols-2 grid-rows-2 gap-4">
       <li v-for="(option, index) in options">
         <button
           @click="pick(option)"
@@ -70,9 +70,9 @@ onUnmounted(() => {
             'bg-red-300': revealed && option.name !== letter.name,
           }"
         >
-          <span class="absolute top-[1px] left-[3px] text-sm">{{
+          <kbd class="absolute top-[1px] left-[3px] text-sm">{{
             index + 1
-          }}</span>
+          }}</kbd>
           <span :class="{ invisible: !revealed }" lang="ka">{{
             option.name
           }}</span>
@@ -99,5 +99,3 @@ body,
   font-family: Arial, Helvetica, sans-serif;
 }
 </style>
-
-<style scoped></style>

@@ -14,6 +14,7 @@ export default defineNuxtConfig({
           content: "Quiz-like app learn Georgian alphabet",
         },
       ],
+      link: [{ rel: "icon", type: "image/x-icon", href: "./favicon.ico" }],
     },
   },
   modules: ["@nuxtjs/tailwindcss"],

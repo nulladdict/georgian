@@ -16,7 +16,7 @@ onUnmounted(() => clearInterval(id));
 <template>
   <span v-if="timer > 0" class="grid grid-cols-1 grid-rows-1 text-xl">
     <svg
-      class="col-start-1 row-start-1 h-7 w-7 overflow-visible stroke-orange-500 stroke-2"
+      class="col-start-1 row-start-1 h-7 w-7 overflow-visible stroke-indigo-500 stroke-2"
       :style="{ '--duration': props.duration + 's' }"
     >
       <circle r="14" cx="14" cy="14" fill="none"></circle>
